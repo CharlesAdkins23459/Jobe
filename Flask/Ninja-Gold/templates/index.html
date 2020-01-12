@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Ninja Gold</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <p>Your Gold: GOLD</p>
+        </div>
+        <div class="options">
+            <div class="farm">
+                <h2>Farm</h2>
+                <p>(earns 10-20 golds)</p>
+                <form action="/process_money">
+                    <input type="hidden">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div class="cave">
+                <h2>Cave</h2>
+                <p>(earns 5-10 golds)</p>
+                <form action="/process_money">
+                    <input type="hidden">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div class="house">
+                <h2>House</h2>
+                <p>(earns 2-5 golds)</p>
+                <form action="/process_money">
+                    <input type="hidden">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div class="casino">
+                <form action="/process_money">
+                <h2>Casino</h2>
+                <p>(earns/takes 0-50 golds)</p>
+                <form action="/process_money">
+                    <input type="hidden">
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+        </div>
+        <div class="activities">
+            Activities:
+        </div>
+    </div>
+</body>
+</html>
