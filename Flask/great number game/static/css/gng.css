@@ -1,0 +1,88 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    width: 800px;
+    margin: 0 auto;
+    /* background-color: green; */
+}
+.text h1 {
+    margin: 20px;
+    font-size: 45px;
+    line-height: 50px;
+}
+
+p:nth-of-type(2) {
+    margin-top: 40px;
+}
+
+.text {
+    text-align: center;
+    /* background-color: yellow; */
+    margin-bottom: 45px;
+    font-size: 25px;
+    line-height: 40px;
+}
+.outcome {
+    /* background-color: blue; */
+    height: 200px;
+    width: 200px;
+    font-size: 40px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 50%;
+    vertical-align: middle;
+    /* background-color: grey; */
+}
+.outcome p {
+    vertical-align: middle;
+    /* background-color: yellow;
+    line-height: 150px; */
+    padding-top: 75px;
+}
+span {
+    width: 100px;
+    font-size: 25px;
+    display: inline-block;
+    margin: 10px auto;
+}
+
+form {
+    /* background-color: blue; */
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+input[type=text] {
+    width: 100px;
+    height: 50px;
+    border: 1px black solid;
+    background-color: lightgrey;
+    display: inline-block;
+    margin: 0 auto;
+    border: 0px;
+    font-size: 50px;
+    text-align: center;
+}
+input[type=submit] {
+    /* background-color: orange; */
+    width: 100px;
+    height: 25px;
+    margin: 0 auto;
+    display: inline;
+    border: 0px;
+}
+.guess {
+    background-color: grey;
+}
+.bad-guess {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.new-game {
+    text-align: right;
+}

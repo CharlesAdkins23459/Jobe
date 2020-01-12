@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gng.css') }}">
+
+    <title>Great Number Game</title>
+</head>
+<body>
+    <div class='container'>
+
+        <div class="text">
+            <h1>Welcome to <p>The Great Number Game!</h1></p>
+            <p>I am thinking of a number between 1 and 100.</p>
+            <p>Take a guess!</p>
+        </div>
+        {% if numGuesses < 5 %}
+        {% if guess == "guess" %}
+            <div class='outcome guess'></div>
+        {% elif outcome == "Correct!" %} 
+            <div class='outcome green'> 
+                <p>Correct! <span>It was {{randNum}}</span>
+                </p>
+                
+            </div>
+        {% elif outcome == "Too Low!" %}
+            <div class='outcome bad-guess'><p>Too Low!</p></div>
+        {% elif outcome == "Too High!" %}
+            <div class='outcome bad-guess'><p>Too High!</p></div>
+        {% endif %}
+        {% else %}
+        <div class="outcome bad-guess"><p><span>It was {{randNum}}</span></p></div>
+        {% endif %}
+
+        <form action='/check' method='POST'>
+            <input type="text" name="guess">
+            <input type='submit' value="submit">
+        </form>
+        <p class="new-game"><a href="/new-game">new game</a></p>
+
+
+    </div>
+</body>
+</html>
