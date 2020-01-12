@@ -5,10 +5,6 @@
 body {
     background-color: grey;
 }
-h2 {
-    text-size: 150px;
-
-}
 .options-group {
     background-color: red;
     width: 1000px;
@@ -39,11 +35,12 @@ input[type=submit] {
     border: 1px black solid;
     margin: 0 auto;
     font-size: 15px;
+    overflow: auto;
 }
 
-.red {
+.activities-text .red {
     color: red;
 }
-.black {
-    color: black;
+.activities-text .green {
+    color: green;
 }

@@ -12,31 +12,31 @@
 <body>
     <div class="container">
         <div class="top">
-            <p>Your Gold: GOLD</p>
+            <p>Your Gold: {{amount_of_gold}}</p>
         </div>
         <div class="options-group">
             <div class="option farm">
                 <h1>Farm</h1>
                 <p>(earns 10-20 golds)</p>
                 <form action="/process_gold" method='POST'>
-                    <!-- <input type="hidden"> -->
-                    <input type="submit" value="Find Gold!" name="choice">
+                    <input type="hidden" value="farm" name="choice">
+                    <input type="submit" value="Find Gold">
                 </form>
             </div>
             <div class="option cave">
                 <h1>Cave</h1>
                 <p>(earns 5-10 golds)</p>
                 <form action="/process_gold" method='POST'>
-                    <!-- <input type="hidden"> -->
-                    <input type="submit" value="Find Gold!" name="choice">
+                    <input type="hidden" value="cave" name="choice">
+                    <input type="submit" value="Find Gold!">
                 </form>
             </div>
             <div class="option house">
                 <h1>House</h1>
                 <p>(earns 2-5 golds)</p>
                 <form action="/process_gold" method='POST'>
-                    <!-- <input type="hidden"> -->
-                    <input type="submit" value="Find Gold!"  name="choice">
+                    <input type="hidden" value="house" name="choice">
+                    <input type="submit" value="Find Gold!">
                 </form>
             </div>
             <div class="option casino">
@@ -44,15 +44,20 @@
                 <h1>Casino</h1>
                 <p>(earns/takes 0-50 golds)</p>
                 <form action="/process_money">
-                    <!-- <input type="hidden"> -->
-                    <input type="submit" value="Find Gold!"  name="choice">
+                    <input type="hidden" value="casino" name="choice">  
+                    <input type="submit" value="Find Gold!">
                 </form>
             </div>
         </div>
         <div class="activities">
             <p>Activities:</p>
-            <div class="activities-text"></div>
+            <div class="activities-text">
+                {% for activity in activity_list|reverse %}
+                    {{activity}}
+                {% endfor %}
+            </div>
         </div>
+        <p><a href="/new_game">new game</a></p>
     </div>
 </body>
 </html>
