@@ -1,3 +1,49 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
 body {
-    background-color: blue;
+    background-color: grey;
+}
+h2 {
+    text-size: 150px;
+
+}
+.options-group {
+    background-color: red;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.option {
+    background-color: yellow;
+    width: 195px;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+input[type=submit] {
+    padding: 20px;
+}
+
+.activities p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.activities-text {
+    height: 200px;
+    width: 1100px;
+    border: 1px black solid;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+.red {
+    color: red;
+}
+.black {
+    color: black;
 }
