@@ -10,8 +10,18 @@
 </head>
 <body>
     <div class="flex_container">
+        {{request.session.wins}}
+        {{request.session.losses}}
+        {{request.session.ties}}
         <div class="container">
             <h1>Rock Papper Scissors</h1>
+        </div>
+        <div class="choices">
+            <form action="/process_play" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="player_choice" value="rock">
+                <button type="submit">Rock</button>
+            </form>
         </div>
     </div>
 </body>
